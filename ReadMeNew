@@ -1,0 +1,64 @@
+README: Product Review Summarizer and Sentiment Analyzer
+📦 Project Description
+This is a full-stack web application designed to help users summarize, analyze, and compare Amazon product reviews using AI. It uses OpenAI GPT-3.5 for natural language summarization, custom ML models for sentiment and star rating prediction, and Selenium for live review scraping. The tool features a web interface built with Flask and JavaScript, supporting both static and live analysis of product reviews.
+🚀 Features
+
+• Summarize reviews using GPT-3.5  
+• Predict sentiment breakdown (positive, neutral, negative)  
+• Predict star ratings from text  
+• Compare two products side by side  
+• Scrape live Amazon product reviews via URL  
+• Chatbot answers custom product-related questions  
+• Visualize sentiment in charts and show predicted star icons
+
+🛠️ Setup Instructions
+
+1. Clone or download the repository.
+2. Install the required packages:  
+   pip install -r requirements.txt
+3. Download ChromeDriver and ensure it matches your Chrome version.
+4. Add your OpenAI API key as an environment variable or in a `.env` file:
+   OPENAI_API_KEY=your_api_key_here
+5. Run the Flask app:
+   cd Project  
+   python app.py
+6. Open http://127.0.0.1:5000 in your browser.
+
+📁 Folder Structure
+
+• Project/  
+    ├── app.py                # Main Flask app  
+    ├── DataPre2.py           # Preprocess and cache cleaned data  
+    ├── Sum2.py               # Summarization with OpenAI  
+    ├── SentAnalysis2.py      # Sentiment prediction module  
+    ├── amazon_scraper.py     # Selenium scraper for reviews  
+    ├── train_sentiment_model.py # Model training script  
+    ├── train_star_model.py   # Star rating prediction model  
+    ├── templates/index.html  # Frontend HTML  
+    ├── static/               # JS and CSS  
+    └── requirements.txt      # Required packages
+
+🔐 Dependencies
+
+• Flask  
+• Pandas  
+• Scikit-learn  
+• NLTK  
+• Selenium  
+• BeautifulSoup4  
+• OpenAI SDK  
+• python-dotenv  
+
+📌 Notes
+
+• Use Python 3.8+  
+• Ensure ChromeDriver is executable and compatible with your system/browser version  
+• OpenAI API may incur costs depending on usage  
+• On Windows, you may need to run NLTK download commands manually
+
+🙌 Acknowledgements
+
+• Kaggle for Amazon Fine Food Reviews dataset  
+• OpenAI for providing GPT-3.5 APIs  
+• Python community for extensive open-source libraries used in this project
+
